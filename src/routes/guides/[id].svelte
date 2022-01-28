@@ -27,7 +27,7 @@
 </script>
 
 <div>
-    <div class="guide" in:fade out:slide>
+    <div class="guide" in:fade out:scale>
         <h2>{guide.title}</h2>
         <p>{guide.body}</p>
     </div>
