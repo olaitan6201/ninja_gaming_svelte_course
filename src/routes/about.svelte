@@ -1,3 +1,10 @@
+<script>
+    import Title from "./lib/title.svelte";
+</script>
+
+
+<Title title="Ninja Gaming Reviews"/>
+
 <div class="about">
     <h2>About Us</h2>
 
