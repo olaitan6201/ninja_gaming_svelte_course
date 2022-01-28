@@ -1,5 +1,6 @@
 <script context="module">
     export async function load({ fetch, page }){
+        await new Promise(resolve => setTimeout(resolve, 1000));
         const id = page.params.id;
         const res = await fetch('https://jsonplaceholder.typicode.com/posts/'+id);
         const guide = await res.json();
@@ -21,12 +22,15 @@
 </script>
 
 <script>
+    import { fade, scale, slide } from "svelte/transition";
     export let guide;
 </script>
 
-<div class="guide">
-    <h2>{guide.title}</h2>
-    <p>{guide.body}</p>
+<div>
+    <div class="guide" in:fade out:slide>
+        <h2>{guide.title}</h2>
+        <p>{guide.body}</p>
+    </div>
 </div>
 
 <style>
